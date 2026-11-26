@@ -17,7 +17,16 @@
     <section id="projects" class="card"><h2>Projects</h2><ul><li>Weather app</li><li>3D portfolio</li><li>Portfolio chatbot</li></ul></section>
     <section id="skills" class="card"><h2>Skills</h2><p>HTML · CSS · JavaScript · Three.js · Git</p></section>
   </main>
+  <div id="chat">
+    <div class="chat-title">💬 Ask my bot</div>
+    <div id="chat-log"></div>
+    <form id="chat-form">
+      <input id="chat-input" type="text" placeholder="Ask me anything…" autocomplete="off">
+      <button type="submit">Send</button>
+    </form>
+  </div>
   <footer>Made during Glitch Academy</footer>
   <script type="module" src="bg.js"></script>
+  <script src="chat.js" defer></script>
 </body>
 </html>

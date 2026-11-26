@@ -7,3 +7,4 @@ This is my portfolio for the Glitch Academy workshop. Over five quests it grows 
 - [x] Identity Shell: HTML & CSS portfolio
 - [x] Holo Projection: a Three.js background
 - [x] Chassis Sync: my 3D avatar (assets/avatar.glb)
+- [x] Consciousness: a chatbot that answers
