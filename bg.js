@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 100);
@@ -18,12 +19,21 @@ const knot = new THREE.Mesh(
 );
 scene.add(knot);
 
+let model;
+new GLTFLoader().load('assets/avatar.glb', (gltf) => {
+  model = gltf.scene;
+  model.scale.setScalar(1.4);
+  model.position.set(2.2, -1.3, 0);
+  scene.add(model);
+});
+
 const clock = new THREE.Clock();
 function animate() {
   requestAnimationFrame(animate);
   const delta = clock.getDelta();
   knot.rotation.x += 0.2 * delta;
   knot.rotation.y += 0.3 * delta;
+  if (model) model.rotation.y += 0.6 * delta;
   renderer.render(scene, camera);
 }
 animate();
