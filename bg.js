@@ -22,8 +22,8 @@ scene.add(knot);
 let model;
 new GLTFLoader().load('assets/avatar.glb', (gltf) => {
   model = gltf.scene;
-  model.scale.setScalar(1.4);
-  model.position.set(2.2, -1.3, 0);
+  model.scale.setScalar(1.25);
+  model.position.set(-3.3, -2.3, 0);
   scene.add(model);
 });
 
